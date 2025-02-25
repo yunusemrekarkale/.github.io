@@ -3,85 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotoğraflar ve Yıllık Yazısı</title>
+    <title>Arkadaşıma Özel Sayfa</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
-            text-align: center;
-            padding: 50px;
-        }
-        .button-container {
             margin: 20px;
         }
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 20px;
             font-size: 16px;
-            margin: 4px 2px;
             cursor: pointer;
-            border: none;
-            border-radius: 12px;
         }
-        #photos {
+        .content {
             display: none;
             margin-top: 20px;
         }
-        #photos img {
-            width: 200px;
-            height: auto;
-            margin: 10px;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .photo-group {
+            margin-bottom: 20px;
         }
-        #essay {
-            display: none;
-            margin-top: 20px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
+        .photo-group h3 {
+            margin-bottom: 10px;
+        }
+        .photo-group img {
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .audio-list audio {
+            display: block;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-
-    <h1>Fotoğraflar ve Yıllık Yazısı</h1>
-    <div class="button-container">
-        <button class="button" onclick="showPhotos()">Fotoğraflar</button>
-        <button class="button" onclick="showEssay()">Yıllık Yazısı</button>
+    <h1>Arkadaşıma Özel Sayfa</h1>
+    
+    <button onclick="showContent('yillik-yazisi')">Yıllık Yazısı</button>
+    <button onclick="showContent('fotograflar')">Fotoğraflar</button>
+    <button onclick="showContent('sesler')">Sesler</button>
+    
+    <div id="yillik-yazisi" class="content">
+        <h2>Yıllık Yazısı</h2>
+        <p>Sevgili arkadaşım, bu yıl seninle birlikte geçirdiğimiz harika anıları asla unutmayacağım. Seninle birlikte gülmek, eğlenmek ve zor zamanlarda birbirimize destek olmak benim için çok değerliydi. Seninle daha nice güzel anılar biriktirmek dileğiyle...</p>
     </div>
-
-    <div id="photos">
-        <img src="photo1.jpg" alt="Arkadaşımla Fotoğraf 1">
-        <img src="photo2.jpg" alt="Arkadaşımla Fotoğraf 2">
-        <img src="photo3.jpg" alt="Arkadaşımla Fotoğraf 3">
+    
+    <div id="fotograflar" class="content">
+        <h2>Fotoğraflar</h2>
+        
+        <div class="photo-group">
+            <h3>Grup 1</h3>
+            <img src="photo1.jpg" alt="Fotoğraf 1">
+            <img src="photo2.jpg" alt="Fotoğraf 2">
+        </div>
+        
+        <div class="photo-group">
+            <h3>Grup 2</h3>
+            <img src="photo3.jpg" alt="Fotoğraf 3">
+            <img src="photo4.jpg" alt="Fotoğraf 4">
+        </div>
     </div>
-
-    <div id="essay">
-        <p>Buraya yıllık yazınızı yazabilirsiniz. Örneğin: "Bu yıl arkadaşlarımla çok güzel vakit geçirdik. Birlikte birçok anı biriktirdik ve bu anılar bizim için çok değerli. Gelecek yıllarda da bu dostluklarımızı sürdürmeyi umuyorum."</p>
+    
+    <div id="sesler" class="content">
+        <h2>Sesler</h2>
+        <div class="audio-list">
+            <audio controls>
+                <source src="audio1.mp3" type="audio/mpeg">
+                Tarayıcınız ses elementini desteklemiyor.
+            </audio>
+            <audio controls>
+                <source src="audio2.mp3" type="audio/mpeg">
+                Tarayıcınız ses elementini desteklemiyor.
+            </audio>
+        </div>
     </div>
-
+    
     <script>
-        function showPhotos() {
-            document.getElementById('photos').style.display = 'block';
-            document.getElementById('essay').style.display = 'none';
-        }
-
-        function showEssay() {
-            document.getElementById('photos').style.display = 'none';
-            document.getElementById('essay').style.display = 'block';
+        function showContent(id) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            
+            var selectedContent = document.getElementById(id);
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
         }
     </script>
-
 </body>
 </html>
