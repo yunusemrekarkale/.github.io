@@ -3,10 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fotoğraflar ve Yıllık Yazısı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            text-align: center;
+            padding: 50px;
+        }
+        .button-container {
+            margin: 20px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+        }
+        #photos {
+            display: none;
+            margin-top: 20px;
+        }
+        #photos img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #essay {
+            display: none;
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center;
-       background-color: cornSilk;">Kadir Dinç'e Sevgilerle ...</h1>
+
+    <h1>Fotoğraflar ve Yıllık Yazısı</h1>
+    <div class="button-container">
+        <button class="button" onclick="showPhotos()">Fotoğraflar</button>
+        <button class="button" onclick="showEssay()">Yıllık Yazısı</button>
+    </div>
+
+    <div id="photos">
+        <img src="photo1.jpg" alt="Arkadaşımla Fotoğraf 1">
+        <img src="photo2.jpg" alt="Arkadaşımla Fotoğraf 2">
+        <img src="photo3.jpg" alt="Arkadaşımla Fotoğraf 3">
+    </div>
+
+    <div id="essay">
+        <p>Buraya yıllık yazınızı yazabilirsiniz. Örneğin: "Bu yıl arkadaşlarımla çok güzel vakit geçirdik. Birlikte birçok anı biriktirdik ve bu anılar bizim için çok değerli. Gelecek yıllarda da bu dostluklarımızı sürdürmeyi umuyorum."</p>
+    </div>
+
+    <script>
+        function showPhotos() {
+            document.getElementById('photos').style.display = 'block';
+            document.getElementById('essay').style.display = 'none';
+        }
+
+        function showEssay() {
+            document.getElementById('photos').style.display = 'none';
+            document.getElementById('essay').style.display = 'block';
+        }
+    </script>
+
 </body>
 </html>
