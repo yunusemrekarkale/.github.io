@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,13 +20,13 @@
             display: none;
             margin-top: 20px;
         }
-        .photo-group {
+        .photo-group, .video-group {
             margin-bottom: 20px;
         }
-        .photo-group h3 {
+        .photo-group h3, .video-group h3 {
             margin-bottom: 10px;
         }
-        .photo-group img {
+        .photo-group img, .video-group video {
             width: 150px;
             height: 150px;
             margin-right: 10px;
@@ -43,7 +43,8 @@
     <h1>Arkadaşıma Özel Sayfa</h1>
     
     <button onclick="showContent('yillik-yazisi')">Yıllık Yazısı</button>
-    <button onclick="showContent('fotograflar')">Fotoğraflar</button>
+    <button onclick="showContent('kis-anilari')">Kış Anıları</button>
+    <button onclick="showContent('okul-anilari')">Okul Anıları</button>
     <button onclick="showContent('sesler')">Sesler</button>
     
     <div id="yillik-yazisi" class="content">
@@ -51,19 +52,47 @@
         <p>şimdi değil...</p>
     </div>
     
-    <div id="fotograflar" class="content">
-        <h2>Fotoğraflar</h2>
+    <div id="kis-anilari" class="content">
+        <h2>Kış Anıları</h2>
         
         <div class="photo-group">
-            <h3>Grup 1</h3>
-            <img src="photo1.jpg" alt="Fotoğraf 1">
-            <img src="photo2.jpg" alt="Fotoğraf 2">
+            <h3>Fotoğraflar</h3>
+            <img src="kis-photo1.jpg" alt="Kış Fotoğraf 1">
+            <img src="kis-photo2.jpg" alt="Kış Fotoğraf 2">
         </div>
         
+        <div class="video-group">
+            <h3>Videolar</h3>
+            <video controls>
+                <source src="kis-video1.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+            <video controls>
+                <source src="kis-video2.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+        </div>
+    </div>
+    
+    <div id="okul-anilari" class="content">
+        <h2>Okul Anıları</h2>
+        
         <div class="photo-group">
-            <h3>Grup 2</h3>
-            <img src="photo3.jpg" alt="Fotoğraf 3">
-            <img src="photo4.jpg" alt="Fotoğraf 4">
+            <h3>Fotoğraflar</h3>
+            <img src="okul-photo1.jpg" alt="Okul Fotoğraf 1">
+            <img src="okul-photo2.jpg" alt="Okul Fotoğraf 2">
+        </div>
+        
+        <div class="video-group">
+            <h3>Videolar</h3>
+            <video controls>
+                <source src="okul-video1.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+            <video controls>
+                <source src="okul-video2.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
         </div>
     </div>
     
@@ -96,3 +125,5 @@
     </script>
 </body>
 </html>
+    
+    
