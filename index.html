@@ -1,4 +1,4 @@
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background: #f0f0f0; /* Aesthetic background */
         }
         button {
             display: block;
@@ -15,6 +16,10 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
         }
         .content {
             display: none;
@@ -41,61 +46,57 @@
 </head>
 <body>
     <h1>Arkadaşıma Özel Sayfa</h1>
-    
+
     <button onclick="showContent('yillik-yazisi')">Yıllık Yazısı</button>
-    <button onclick="showContent('kis-anilari')">Kış Anıları</button>
-    <button onclick="showContent('okul-anilari')">Okul Anıları</button>
+    <button onclick="showContent('fotograflar')">Fotoğraflar</button>
+    <button onclick="showContent('videolar')">Videolar</button>
     <button onclick="showContent('sesler')">Sesler</button>
-    
+
     <div id="yillik-yazisi" class="content">
         <h2>Yıllık Yazısı</h2>
-        <p>şimdi değil...</p>
+        <p>Arkadaşım için yazacağım yıllık yazısı burada olacak.</p>
     </div>
-    
-    <div id="kis-anilari" class="content">
-        <h2>Kış Anıları</h2>
-        
+
+    <div id="fotograflar" class="content">
+        <h2>Fotoğraflar</h2>
         <div class="photo-group">
-            <h3>Fotoğraflar</h3>
-            <img src="kis-photo1.jpg" alt="Kış Fotoğraf 1">
-            <img src="kis-photo2.jpg" alt="Kış Fotoğraf 2">
+            <h3>Grup 1</h3>
+            <img src="group1-photo1.jpg" alt="Grup 1 Fotoğraf 1">
+            <img src="group1-photo2.jpg" alt="Grup 1 Fotoğraf 2">
         </div>
-        
-        <div class="video-group">
-            <h3>Videolar</h3>
-            <video controls>
-                <source src="kis-video1.mp4" type="video/mp4">
-                Tarayıcınız video etiketini desteklemiyor.
-            </video>
-            <video controls>
-                <source src="kis-video2.mp4" type="video/mp4">
-                Tarayıcınız video etiketini desteklemiyor.
-            </video>
-        </div>
-    </div>
-    
-    <div id="okul-anilari" class="content">
-        <h2>Okul Anıları</h2>
-        
         <div class="photo-group">
-            <h3>Fotoğraflar</h3>
-            <img src="okul-photo1.jpg" alt="Okul Fotoğraf 1">
-            <img src="okul-photo2.jpg" alt="Okul Fotoğraf 2">
+            <h3>Grup 2</h3>
+            <img src="group2-photo1.jpg" alt="Grup 2 Fotoğraf 1">
+            <img src="group2-photo2.jpg" alt="Grup 2 Fotoğraf 2">
         </div>
-        
+    </div>
+
+    <div id="videolar" class="content">
+        <h2>Videolar</h2>
         <div class="video-group">
-            <h3>Videolar</h3>
+            <h3 contenteditable="true">Grup 1</h3> <!-- Editable group name -->
             <video controls>
-                <source src="okul-video1.mp4" type="video/mp4">
+                <source src="group1-video1.mp4" type="video/mp4">
                 Tarayıcınız video etiketini desteklemiyor.
             </video>
             <video controls>
-                <source src="okul-video2.mp4" type="video/mp4">
+                <source src="group1-video2.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+        </div>
+        <div class="video-group">
+            <h3 contenteditable="true">Grup 2</h3> <!-- Editable group name -->
+            <video controls>
+                <source src="group2-video1.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+            <video controls>
+                <source src="group2-video2.mp4" type="video/mp4">
                 Tarayıcınız video etiketini desteklemiyor.
             </video>
         </div>
     </div>
-    
+
     <div id="sesler" class="content">
         <h2>Sesler</h2>
         <div class="audio-list">
@@ -109,14 +110,14 @@
             </audio>
         </div>
     </div>
-    
+
     <script>
         function showContent(id) {
             var contents = document.querySelectorAll('.content');
             contents.forEach(function(content) {
                 content.style.display = 'none';
             });
-            
+
             var selectedContent = document.getElementById(id);
             if (selectedContent) {
                 selectedContent.style.display = 'block';
