@@ -4,6 +4,12 @@ body {
     background-color: cornSilk;
     text-align: center;
 }
+h1 {
+    background-color: red;
+    border-radius: 30px;
+    color: white;
+}
+
 
 button {
     display: block;
