@@ -1,7 +1,7 @@
 function login() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    if (username === 'h126725' && password === 'YunusEmreKARKALE') {
+    if (username === 'h126725', 'H126725' && password === 'YunusEmreKARKALE') {
         document.getElementById('login').style.display = 'none';
         document.getElementById('main-content').style.display = 'block';
     } else {
@@ -19,4 +19,7 @@ function showContent(id) {
     if (selectedContent) {
         selectedContent.style.display = 'block';
     }
+    
+        return
 }
+
