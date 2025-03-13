@@ -1,6 +1,8 @@
 const users = [
-    { username: 'user1', password: 'randomPassword1' },
-    { username: 'user2', password: 'randomPassword2' },
+    { username: 'YunusEmreKARKALE', password: 'YunusEmre42.' },
+    { username: 'KadirDİNÇ', password: 'Kadir42.' },
+    { username: 'TarıkSARICI', password: 'Tarık42.'},
+    { username: 'NurullahÇELİK', password: 'Nurullah42.'},
     // Diğer kullanıcılar...
 ];
 
