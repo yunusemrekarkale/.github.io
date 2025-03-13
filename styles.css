@@ -1,63 +1,39 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 200px 0px 200px 0px;
-    background-color: cornSilk;
-    text-align: center;
-}
-h1 {
-    background-color: red;
-    border-radius: 30px;
-    color: white;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-
-button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    width: 200px;
-}
-
-.content {
-    display: none;
-    margin-top: 20px;
+.container {
+    margin-top: 50px;
 }
 
 .header {
-    background-color: red;
-    color: white;
-    border-radius: 20px;
-    border: solid black;
-    font-size: 20px;
-    text-align: center;
-    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.photo-group, .video-group {
+.content-section {
+    display: none;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
     margin-bottom: 20px;
 }
 
-.photo-group h3, .video-group h3 {
-    margin-bottom: 10px;
-    cursor: pointer;
+button {
+    padding: 10px 20px;
+    font-size: 16px;
 }
 
-.photo-group img, .video-group video {
-    width: 150px;
-    height: 150px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    display: inline-block;
+.photo-group, .video-group, .audio-list {
+    margin-bottom: 20px;
 }
 
-.audio-list audio {
+img, video, audio {
     display: block;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
