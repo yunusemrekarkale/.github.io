@@ -7,7 +7,7 @@ const port = 3000;
 
 // Kullanıcı veritabanı (örnek)
 const users = [
-    { username: 'user1', password: 'password1', content: { photos: ['photo1.jpg'], videos: ['video1.mp4'], writings: ['Yazı 1'], audios: ['audio1.mp3'] }},
+    { username: 'user1', password: 'password1', content: { photos: ['photo1.jpg'], videos: ['video1.mp4'], writings: ['aslan kardeşim'], audios: ['audio1.mp3'] }},
     { username: 'user2', password: 'password2', content: { photos: ['photo2.jpg'], videos: ['video2.mp4'], writings: ['Yazı 2'], audios: ['audio2.mp3'] }}
 ];
 
