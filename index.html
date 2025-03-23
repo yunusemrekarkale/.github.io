@@ -1,21 +1,36 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Giriş Yap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yıllık Sayfası</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Giriş Yap</h1>
-    <form action="/login" method="POST">
-        <label for="username">Kullanıcı Adı:</label>
-        <input type="text" id="username" name="username">
-        <br>
-        <label for="password">Parola:</label>
-        <input type="password" id="password" name="password">
-        <br>
-        <button type="submit">Giriş Yap</button>
-    </form>
-       <script src="script.js"></script>
+    <div class="login-container">
+        <h2>Giriş Yap</h2>
+        <form id="loginForm">
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Parola:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+    </div>
+
+    <div class="content-container" style="display: none;">
+        <h1>Yıllık Sayfası</h1>
+        <button id="annualTextButton">Yıllık Yazıları</button>
+        <button id="photosButton">Fotoğraflar</button>
+        <button id="videosButton">Videolar</button>
+        <button id="soundsButton">Sesler</button>
+
+        <div id="annualTextContent" class="hidden">Yıllık Yazıları İçeriği</div>
+        <div id="photosContent" class="hidden">Fotoğraflar İçeriği</div>
+        <div id="videosContent" class="hidden">Videolar İçeriği</div>
+        <div id="soundsContent" class="hidden">Sesler İçeriği</div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
