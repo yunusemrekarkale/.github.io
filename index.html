@@ -1,95 +1,20 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkadaşıma Özel Sayfa</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Giriş Yap</title>
 </head>
 <body>
-    <div id="login">
-        <h1>2025 Mezunları Yıllığı</h1> 
-        <h2>Yıllığına Erişmek İçin Lütfen Giriş Yapın </h2>
-        <input type="text" id="username" placeholder="Kullanıcı Adı"><br>
-        <input type="password" id="password" placeholder="Şifre">
-        <button onclick="login()">Giriş Yap</button>
-        <p id="error-message" style="color: red; display: none;">Kullanıcı adı veya şifre hatalı!</p>
-    </div>
-    <div id="main-content" style="display: none;">
-        <div class="header">Aslan Kardeşim Oğuzhan KAVUKÇU'ya</div>
-        <button onclick="showContent('yillik-yazisi')">Yıllık Yazısı</button>
-        <button onclick="showContent('fotograflar')">Fotoğraflar</button>
-        <button onclick="showContent('videolar')">Videolar</button>
-        <button onclick="showContent('sesler')">Sesler</button>
-
-        <div id="yillik-yazisi" class="content">
-            <h2>Yıllık Yazısı</h2>
-            <p>Arkadaşım için yazacağım yıllıkbu benim yiyeceğim değil</p>
-        </div>
-
-        <div id="fotograflar" class="content">
-            <h2>Fotoğraflar</h2>
-            <div class="photo-group">
-                <h3 contenteditable="true">Grup 1</h3>
-                <img src="group1-photo1.jpg" alt="Grup 1 Fotoğraf 1">
-                <img src="group1-photo2.jpg" alt="Grup 1 Fotoğraf 2">
-                <audio controls>
-                    <source src="group1-music.mp3" type="audio/mpeg">
-                    Tarayıcınız ses elementini desteklemiyor.
-                </audio>
-            </div>
-            <div class="photo-group">
-                <h3 contenteditable="true">Grup 2</h3>
-                <img src="group2-photo1.jpg" alt="Grup 2 Fotoğraf 1">
-                <img src="group2-photo2.jpg" alt="Grup 2 Fotoğraf 2">
-                <audio controls>
-                    <source src="group2-music.mp3" type="audio/mpeg">
-                    Tarayıcınız ses elementini desteklemiyor.
-                </audio>
-            </div>
-        </div>
-
-        <div id="videolar" class="content">
-            <h2>Videolar</h2>
-            <div class="video-group">
-                <h3 contenteditable="true">Grup 1</h3>
-                <video controls>
-                    <source src="group1-video1.mp4" type="video/mp4">
-                    Tarayıcınız video etiketini desteklemiyor.
-                </video>
-                <video controls>
-                    <source src="group1-video2.mp4" type="video/mp4">
-                    Tarayıcınız video etiketini desteklemiyor.
-                </video>
-            </div>
-            <div class="video-group">
-                <h3 contenteditable="true">Grup 2</h3>
-                <video controls>
-                    <source src="group2-video1.mp4" type="video/mp4">
-                    Tarayıcınız video etiketini desteklemiyor.
-                </video>
-                <video controls>
-                    <source src="group2-video2.mp4" type="video/mp4">
-                    Tarayıcınız video etiketini desteklemiyor.
-                </video>
-            </div>
-        </div>
-
-        <div id="sesler" class="content">
-            <h2>Sesler</h2>
-            <div class="audio-list">
-                <audio controls>
-                    <source src="audio1.mp3" type="audio/mpeg">
-                    Tarayıcınız ses elementini desteklemiyor.
-                </audio>
-                <audio controls>
-                    <source src="audio2.mp3" type="audio/mpeg">
-                    Tarayıcınız ses elementini desteklemiyor.
-                </audio>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <h1>Giriş Yap</h1>
+    <form action="/login" method="POST">
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Parola:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <button type="submit">Giriş Yap</button>
+    </form>
 </body>
 </html>
